@@ -11,7 +11,7 @@
   <tr>
   	<td><%= todo.title %></td>
   	<td><%= todo.description %></td>
-  	<td><%= todo.updated_at %></td>
+  	<td><%= todo.updated_at.strftime("%B %e, %Y %H:%M") %></td>
   	<td><%= link_to "Show", todo_path(todo) %></td>
   	<td><%= link_to "Edit", edit_todo_path(todo) %></td>
   	<td><%= link_to "Delete", todo,
