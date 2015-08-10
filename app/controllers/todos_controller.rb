@@ -14,6 +14,13 @@ class TodosController < ApplicationController
 	end
 
 	def create
+		@todo = Todo.new(todos_params)
+		
+		if @todo.save
+		  redirect_to todos_path
+		else
+			render 'new'
+		end
 	end
 
 	def update
@@ -21,4 +28,9 @@ class TodosController < ApplicationController
 
 	def destroy
 	end
+
+	private
+	  def todos_params
+	  	params.require(:todo).permit(:title, :description)
+	  end
 end
