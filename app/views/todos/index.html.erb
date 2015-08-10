@@ -3,11 +3,15 @@
 <table>
 	<tr>
 		<th>Title</th>
+		<th>Description</th>
+		<th>Last Modified</th>
 	</tr>
 
 	<% @todos.each do |todo| %>
   <tr>
   	<td><%= todo.title %></td>
+  	<td><%= todo.description %></td>
+  	<td><%= todo.updated_at %></td>
   </tr>
   <% end %>
 </table>
