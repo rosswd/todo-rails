@@ -1,1 +1,13 @@
 <h1>All Tasks</h1>
+
+<table>
+	<tr>
+		<th>Title</th>
+	</tr>
+
+	<% @todos.each do |todo| %>
+  <tr>
+  	<td><%= todo.title %></td>
+  </tr>
+  <% end %>
+</table>
