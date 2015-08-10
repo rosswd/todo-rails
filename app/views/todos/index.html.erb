@@ -12,6 +12,7 @@
   	<td><%= todo.title %></td>
   	<td><%= todo.description %></td>
   	<td><%= todo.updated_at %></td>
+  	<td><%= link_to "Edit", edit_todo_path(todo) %></td>
   </tr>
   <% end %>
 </table>
