@@ -1,23 +1,32 @@
 <h1>All Tasks</h1>
 
-<table class="table table-responsive">
-	<tr>
-		<th>Title</th>
-		<th>Description</th>
-		<th>Last Modified</th>
-	</tr>
-
+<table class="table table-responsive table-hover">
+  <thead>
+	  <tr>
+		  <th>Title</th>
+		  <th>Description</th>
+		  <th>Last Modified</th>
+	  </tr>
+  </thead>
+  <tbody>
 	<% @todos.each do |todo| %>
 	  <tr>
   	  <td><%= link_to todo.title, todo_path(todo) %></td>
   	  <td><%= todo.description %></td>
   	  <td><%= todo.updated_at.strftime('%B %e, %Y %H:%M') %></td>
-  	  <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
+      <td>
+        <%= link_to edit_todo_path(todo), class: 'btn btn-default btn-sm' do %>
+        Edit
+        <%= content_tag(:span, "", class: 'glyphicon glyphicon-pencil') %>
+        <% end %>
+      </td>
   	  <td><%= link_to 'Delete', todo,
   	  method: :delete,
-  	  data: { confirm: 'Are you sure?' } %></td>
+  	  data: { confirm: 'Are you sure?' },
+      class: 'btn btn-danger btn-sm' %></td>
     </tr>
   <% end %>
+  </tbody>
 </table>
 
-<%= link_to 'Add', new_todo_path %>
+<%= link_to 'Add', new_todo_path, class: 'btn btn-primary btn-lg' %>
