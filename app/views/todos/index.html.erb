@@ -1,8 +1,6 @@
 <h1>All Tasks</h1>
 
-<%= link_to 'Add', new_todo_path %>
-
-<table>
+<table class="table table-responsive">
 	<tr>
 		<th>Title</th>
 		<th>Description</th>
@@ -11,10 +9,9 @@
 
 	<% @todos.each do |todo| %>
 	  <tr>
-  	  <td><%= todo.title %></td>
+  	  <td><%= link_to todo.title, todo_path(todo) %></td>
   	  <td><%= todo.description %></td>
   	  <td><%= todo.updated_at.strftime('%B %e, %Y %H:%M') %></td>
-  	  <td><%= link_to 'Show', todo_path(todo) %></td>
   	  <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
   	  <td><%= link_to 'Delete', todo,
   	  method: :delete,
@@ -22,3 +19,5 @@
     </tr>
   <% end %>
 </table>
+
+<%= link_to 'Add', new_todo_path %>
