@@ -9,7 +9,7 @@ A simple todo app built with Ruby on Rails.
 + Change create and update submit buttons and move from partial to own views
 + Create a home page
 + Times (created_at) are entered an hour behind - FIX
-+ Seed database with sample data (seeds.rb)
++ ~~Seed database with sample data (seeds.rb)~~
 + Dynamically add page titles
 + Add support for time zones [optional]
 + Add user registration and authentication [optional]
