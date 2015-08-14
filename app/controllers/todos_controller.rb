@@ -1,6 +1,7 @@
 class TodosController < ApplicationController
 	def index
 		@todos = Todo.all
+		@todos = Todo.order(:updated_at).page params[:page]
 	end
 
 	def show
