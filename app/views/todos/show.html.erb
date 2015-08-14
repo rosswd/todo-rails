@@ -8,5 +8,5 @@
 	Last Modified: <%= @todo.updated_at.strftime("%B %e, %Y %H:%M") %>
 </p>
 
-<%= link_to 'Back', todos_path %>
-<%= link_to 'Edit', edit_todo_path %>
+<%= link_to 'Back', todos_path, class: 'btn btn-primary' %>
+<%= link_to 'Edit', edit_todo_path, class: 'btn btn-warning' %>
