@@ -23,9 +23,9 @@
         <%= content_tag(:span, "", class: 'glyphicon glyphicon-pencil') %>
         <% end %>
       </td>
-  	  <td><%= link_to todo,
-  	    method: :delete,
-  	    data: { confirm: 'Are you sure?' },
+      <td><%= link_to todo,
+        method: :delete,
+        data: { confirm: 'Are you sure?' },
         class: 'btn btn-success btn-sm' do %> Done
         <%= content_tag(:span, "", class: 'glyphicon glyphicon-ok') %>
         <% end %>
