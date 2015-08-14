@@ -1,4 +1,12 @@
 <% provide(:title, 'Task Detail') %>
+<%= render 'nav' %>
+        <li><%= link_to 'Todos', todos_path %></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
 <div class="container">
 <h1>Title: <%= @todo.title %></h1>
 
