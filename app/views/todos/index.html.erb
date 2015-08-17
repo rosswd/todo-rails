@@ -1,12 +1,12 @@
 <% provide(:title, 'All Tasks') %>
 
 <%= render 'nav' %>
-            <li class="active"><a href="#">Todos</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+      <li class="active"><a href="#">Todos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div><!--/.nav-collapse -->
+</div>
+</nav>
 
 <div class="container">
 
@@ -14,18 +14,18 @@
 
 <table class="table table-responsive table-hover">
   <thead>
-	  <tr>
-		  <th>Title</th>
-		  <th>Description</th>
-		  <th>Last Modified</th>
-	  </tr>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Last Modified</th>
+    </tr>
   </thead>
   <tbody>
-	<% @todos.each do |todo| %>
-	  <tr>
-  	  <td><%= link_to todo.title, todo_path(todo) %></td>
-  	  <td><%= todo.description %></td>
-  	  <td><%= pretty_date(todo.updated_at) %></td>
+    <% @todos.each do |todo| %>
+    <tr>
+      <td><%= link_to todo.title, todo_path(todo) %></td>
+      <td><%= todo.description %></td>
+      <td><%= pretty_date(todo.updated_at) %></td>
       <td>
         <%= link_to edit_todo_path(todo), class: 'btn btn-default btn-sm' do %>
         Edit
