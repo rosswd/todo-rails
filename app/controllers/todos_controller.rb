@@ -20,8 +20,10 @@ class TodosController < ApplicationController
     @todo = Todo.new(todos_params)
 
     if @todo.save
+      flash[:notice] = 'Todo added successfully!'
       redirect_to todos_path
     else
+      flash[:notice] = 'Todo NOT created!'
       render 'new'
     end
   end
@@ -30,16 +32,22 @@ class TodosController < ApplicationController
     @todo = Todo.find(params[:id])
 
     if @todo.update(todos_params)
+      flash[:notice] = 'Todo successfully updated!'
       redirect_to todos_path
     else
+      flash[:notice] = 'Todo NOT updated!'
       render 'edit'
     end
   end
 
   def destroy
     @todo = Todo.find(params[:id])
-    @todo.destroy
-    redirect_to todos_path
+    if @todo.destroy
+      flash[:notice] = 'Todo successfully deleted!'
+      redirect_to todos_path
+    else
+      flash[:notice] = 'Todo not deleted. Try again.'
+    end
   end
 
   private
