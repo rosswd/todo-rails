@@ -14,7 +14,7 @@
 <p><%= @todo.description %></p>
 
 <p>
-	Last Modified: <%= @todo.updated_at.strftime("%B %e, %Y %H:%M") %>
+	Last Modified: <%= pretty_date(@todo.updated_at) %>
 </p>
 
 <%= link_to 'Back', todos_path, class: 'btn btn-primary' %>

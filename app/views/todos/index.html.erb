@@ -25,7 +25,7 @@
 	  <tr>
   	  <td><%= link_to todo.title, todo_path(todo) %></td>
   	  <td><%= todo.description %></td>
-  	  <td><%= todo.updated_at.strftime('%B %e, %Y %H:%M') %></td>
+  	  <td><%= pretty_date(todo.updated_at) %></td>
       <td>
         <%= link_to edit_todo_path(todo), class: 'btn btn-default btn-sm' do %>
         Edit
