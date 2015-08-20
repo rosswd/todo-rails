@@ -1,0 +1,30 @@
+<%= provide(:title, 'Contact') %>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+  <div class="navbar-header">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <%= link_to 'Todo Rails', root_path, class: 'navbar-brand' %>
+
+  </div>
+  <div id="navbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li><%= link_to 'Todos', todos_path %></li>
+      <li class="active"><a href="">Contact</a></li>
+    </ul>
+  </div><!--/.nav-collapse -->
+</div>
+</nav>
+
+<div class="container">
+
+<div class="starter-template">
+  <h1>Contact</h1>
+  <p class="lead">Like this app, contact me below to discuss, hire or collaborate.</p>
+</div>
+
+</div><!-- /.container -->
