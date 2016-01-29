@@ -5,8 +5,8 @@ A simple todo app built with Ruby on Rails.
 
 ## TODO
 + Change 'done' popup to a modal.
-+ Fix CSS spacing on forms
-+ Change create and update submit buttons and move from partial to own views
++ ~~Fix CSS spacing on forms~~
++ ~~Change create and update submit buttons~~
 + Add support for time zones [v2]
 + Add user registration and authentication [v2]
 + Create timezones on a per user basis [v2]
