@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rosswd/todo-rails.svg?branch=master)](https://travis-ci.org/rosswd/todo-rails)
+
 # Todo-rails
 A simple todo app built with Ruby on Rails.
 
